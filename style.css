@@ -1,0 +1,108 @@
+
+:root {
+    --pFontSize: 16px;
+    --h1FontSize: 40px;
+    --h2FontSize: 32px;
+    --primaryColor: #e9f1f7;
+    --secondaryColor: #131b23;
+    --accentColor: #2274a5;
+}
+
+
+/* COMPOSITION */
+
+body {
+    border: 1px solid red;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid red;
+}
+
+a {
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+
+
+/* UTILITIES */
+
+
+/* BLOCKS */
+
+nav ul {
+    display: flex;
+    position: relative;
+    height: fit-content;
+    font-size: var(--pFontSize);
+    padding: 5px 0px;
+    border: 1px solid red;
+    margin: 0;
+}
+
+header h1 {
+    width: 50%;
+    border: 1px solid red;
+    font-size: var(--h1FontSize);
+    margin: 0;
+    position: relative;
+    
+}
+
+
+
+li {
+    display: block;
+    list-style: none;
+    padding: 5px;
+    background-color: var(--secondaryColor);
+}
+
+header li {
+    padding: 5px 30px;
+    margin: 5px;
+}
+
+.aboutMe {
+    text-align: center;
+    margin: 20px 20px 80px;
+    max-width: 500px;
+}
+
+.projects {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.projects h2 {
+    text-align: center;
+}
+
+.projectList {
+    margin: 0 auto;
+    position: relative;
+    place-self: center;
+}
+
+.projectList li {
+    margin: 5px auto;
+    position: relative;
+}
+
+.skills h2 {
+    text-align: center;
+    color: var(--secondaryColor)
+}
