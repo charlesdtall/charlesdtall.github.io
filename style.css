@@ -1,8 +1,9 @@
 
 :root {
-    --pFontSize: 16px;
-    --h1FontSize: 40px;
-    --h2FontSize: 32px;
+    --pFontSize: 18px;
+    --h1FontSize: 46px;
+    --h2FontSize: 40px;
+    --fontFamily: Courier;
     --primaryColor: #e9f1f7;
     --secondaryColor: #131b23;
     --accentColor: #2274a5;
@@ -12,14 +13,20 @@
 /* COMPOSITION */
 
 body {
-    border: 1px solid red;
+    font-family: var(--fontFamily);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
     display: grid;
-    justify-content: center;
+    grid-template-areas: 'about headshot'
+                        'projects skills';
+    justify-content: space-around;
     box-sizing: border-box;
-    border: 1px solid red;
+    width: 100%;
+    max-width: 1350px;
 }
 
 header {
@@ -27,7 +34,10 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border: 1px solid red;
+    max-width: 1350px;
+    height: 100px;
+    position: relative;
+
 }
 
 a {
@@ -35,6 +45,9 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: var(--pFontSize);
+}
 
 /* UTILITIES */
 
@@ -47,20 +60,28 @@ nav ul {
     height: fit-content;
     font-size: var(--pFontSize);
     padding: 5px 0px;
-    border: 1px solid red;
     margin: 0;
 }
 
 header h1 {
-    width: 50%;
-    border: 1px solid red;
+    width: fit-content;
+    height: 60px;
     font-size: var(--h1FontSize);
     margin: 0;
     position: relative;
+ 
     
 }
 
+h2 {
+    font-size: var(--h2FontSize);
+}
 
+img {
+    grid-area: headshot;
+    height: 300px;
+    margin-top: 30px;
+}
 
 li {
     display: block;
@@ -70,39 +91,51 @@ li {
 }
 
 header li {
-    padding: 5px 30px;
-    margin: 5px;
+    padding: 15px 30px;
+    margin: 0px 5px;
+    border-radius: 5px;
+    font-size: var(--pFontSize);
+    width: 90px;
+    height: 20px;
+    text-align: center;
 }
 
 .aboutMe {
-    text-align: center;
-    margin: 20px 20px 80px;
+    text-align: left;
     max-width: 500px;
+
 }
 
 .projects {
-    align-content: center;
     display: flex;
     flex-direction: column;
     margin-bottom: 80px;
+    grid-area: projects;
+
+
 }
 
 .projects h2 {
-    text-align: center;
+    text-align: left;
 }
 
 .projectList {
-    margin: 0 auto;
+    margin-left: 0;
     position: relative;
-    place-self: center;
+    padding-left: 0;
+
 }
 
 .projectList li {
-    margin: 5px auto;
+    margin: 10px 0px;
     position: relative;
+    border-radius: 5px;
+    padding: 15px 10px;
+    font-size: var(--pFontSize);
 }
 
 .skills h2 {
     text-align: center;
-    color: var(--secondaryColor)
+    color: var(--secondaryColor);
+    grid-area: skills;
 }
